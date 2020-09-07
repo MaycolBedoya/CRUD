@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    overflow-x: hidden;
+}
+
+@import '~animate.css/animate.min';
+@media only screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+/* keep it mobile friendly by only applying these styles for larger viewports */
+
+@media only screen and (min-width: 641px) {
+    body #form_wrapper {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+#form_wrapper {
+    margin-top: 15px!important;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/*LOGIN button*/
