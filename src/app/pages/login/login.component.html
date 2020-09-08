@@ -1,0 +1,56 @@
+<div class="limiter animate__animated animate__fadeInLeft animate__faster">
+    <div class="container-login100">
+        <div class="wrap-login100 ">
+            <form (ngSubmit)="login(loginForm)" #loginForm="ngForm" class="login100-form validate-form flex-sb flex-w">
+
+                <span class="login100-form-title p-b-51">
+                    Login
+                </span>
+
+                <span *ngIf="loginForm.submitted && loginForm.controls['email'].errors" class="text-danger animate__animated animate__fadeIn">El correo es obligatorio</span>
+                <div class="wrap-input100 m-b-16">
+                    <input [(ngModel)]="userLogin.email" class="input100" type="email" name="email" placeholder="Correo electrónico" required email>
+
+                    <span class="focus-input100"></span>
+                </div>
+
+                <span *ngIf="loginForm.submitted && loginForm.controls['password'].errors" class="text-danger animate__animated animate__fadeIn">Ingresa al menos 6 caracteres</span>
+                <div class="wrap-input100 m-b-16" data-validate="Password is required">
+                    <input [(ngModel)]="userLogin.password" class="input100" type="password" name="password" placeholder="Contraseña" required minlength="6">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="flex-sb-m w-full p-t-3 p-b-24">
+                    <div class="contact100-form-checkbox">
+                        <input [(ngModel)]="remindMe" class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                            Recordar mi usuario
+                        </label>
+                    </div>
+
+                    <div>
+                        <a routerLink="/registro" class="txt1">
+                            ¿No tienes cuenta?
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">
+                        Ingresar
+                    </button>
+                </div>
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">
+                        Ingresar con Google <i class="ml-2 fab fa-google" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">
+                        Ingresar con Facebook<i class="ml-2 fab fa-facebook"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

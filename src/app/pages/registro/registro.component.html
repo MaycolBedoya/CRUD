@@ -1,0 +1,54 @@
+<div class="limiter animate__animated animate__fadeInRight animate__faster">
+    <div class="container-login100">
+        <div class="wrap-login100 ">
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" class="login100-form validate-form flex-sb flex-w">
+
+                <span class="login100-form-title p-b-51">
+                        Crear nueva cuenta
+                    </span>
+
+                <span *ngIf="loginForm.submitted && loginForm.controls['email'].errors" class="text-danger animate__animated animate__fadeIn">El correo es obligatorio</span>
+                <div class="wrap-input100 m-b-16">
+                    <input [(ngModel)]="userLogin.email" class="input100" type="email" name="email" placeholder="Email" required email>
+
+                    <span class="focus-input100"></span>
+                </div>
+
+                <span *ngIf="loginForm.submitted && loginForm.controls['username'].errors" class="text-danger animate__animated animate__fadeIn">El nombre de usuario es obligatorio</span>
+                <div class="wrap-input100 m-b-16">
+                    <input [(ngModel)]="userLogin.username" class="input100" type="text" name="username" placeholder="Nombre de Usuario" minlength="2" required>
+
+                    <span class="focus-input100"></span>
+                </div>
+
+                <span *ngIf="loginForm.submitted && loginForm.controls['password'].errors" class="text-danger animate__animated animate__fadeIn">Ingresa al menos 6 caracteres</span>
+                <div class="wrap-input100 m-b-16">
+                    <input [(ngModel)]="userLogin.password" class="input100" type="password" name="password" placeholder="Contraseña" minlength="6" required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="flex-sb-m w-full p-t-3 p-b-24">
+                    <div class="contact100-form-checkbox">
+                        <input [(ngModel)]="remindMe" class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                                Recordar mi usuario
+                            </label>
+                    </div>
+
+                    <div>
+                        <a routerLink="/login" class="txt1">
+                                ¿Ya tienes cuenta? / Ingresar
+                            </a>
+                    </div>
+                </div>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">
+                            Crear cuenta
+                        </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

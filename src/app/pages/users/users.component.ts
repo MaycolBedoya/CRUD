@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/services/users.service';
 import { UserModel } from 'src/app/models/user.model';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -13,7 +14,8 @@ export class UsersComponent implements OnInit {
   users:UserModel[]=[];
   loading=false;
 
-  constructor(private usersService:UsersService) { }
+  constructor(private usersService:UsersService,
+              private router: Router) { }
 
   ngOnInit() {
     this.loading=true;
@@ -37,5 +39,9 @@ export class UsersComponent implements OnInit {
         this.usersService.deleteUser(user.id).subscribe();
       }
     });
+  }
+  exit(){
+    this.usersService.logout();
+    this.router.navigateByUrl('/login');
   }
 }

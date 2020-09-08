@@ -1,57 +1,59 @@
-<h2>Usuario <small>{{user.nombre}}</small></h2>
-<hr>
+<div class="container-fluid">
+    <h2>Usuario <small>{{user.nombre}}</small></h2>
+    <hr>
 
-<div class="row">
-    <div class="col text-right">
-        <button class="btn btn-danger" routerLink="/users">
+    <div class="row">
+        <div class="col text-right">
+            <button class="btn btn-danger" routerLink="/users">
             <i class="fa fa-arrow-left"></i>
             Regresar
         </button>
+        </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col">
-        <form (ngSubmit)="save(f)" id="form_wrapper" #f="ngForm">
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input [(ngModel)]="user.nombre" name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input [(ngModel)]="user.apellido" name="apellido" type="text" class="form-control" id="apellido" placeholder="Apellido" required>
-            </div>
-            <div class="form-group">
-                <label for="sexo">Sexo</label>
-                <select [(ngModel)]="user.sexo" name="sexo" class="form-control" id="sexo" required>
+    <div class="row">
+        <div class="col">
+            <form (ngSubmit)="save(f)" id="form_wrapper" #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input [(ngModel)]="user.nombre" name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input [(ngModel)]="user.apellido" name="apellido" type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="sexo">Sexo</label>
+                    <select [(ngModel)]="user.sexo" name="sexo" class="form-control" id="sexo" required>
                     <option>Femenino</option>
                     <option>Masculino</option>
                     <option>Otro</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="ciudad">Ciudad</label>
-                <input [(ngModel)]="user.ciudad" name="ciudad" type="text" class="form-control" id="ciudad" placeholder="Ciudad" required>
-            </div>
-            <div class="form-group">
-                <label for="direccion">Dirección</label>
-                <input [(ngModel)]="user.direccion" name="direccion" type="text" class="form-control" id="direccion" placeholder="Dirección" required>
-            </div>
-            <div class="form-group">
-                <label for="telefono">Teléfono</label>
-                <input [(ngModel)]="user.telefono" name="telefono" type="number" class="form-control" id="telefono" placeholder="Teléfono" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Correo electrónico</label>
-                <input [(ngModel)]="user.email" name="email" type="email" class="form-control" id="email" placeholder="name@example.com" required>
-            </div>
-            <hr>
-            <div class="form-group text-center">
-                <button type="submit" class="btn btn-primary w-50">
+                </div>
+                <div class="form-group">
+                    <label for="ciudad">Ciudad</label>
+                    <input [(ngModel)]="user.ciudad" name="ciudad" type="text" class="form-control" id="ciudad" placeholder="Ciudad" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección</label>
+                    <input [(ngModel)]="user.direccion" name="direccion" type="text" class="form-control" id="direccion" placeholder="Dirección" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input [(ngModel)]="user.telefono" name="telefono" type="number" class="form-control" id="telefono" placeholder="Teléfono" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input [(ngModel)]="user.email" name="email" type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                </div>
+                <hr>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary w-50">
                     <i class="fa fa-save"></i>
                     Guardar
                 </button>
-            </div>
-        </form>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
