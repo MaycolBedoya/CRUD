@@ -1,0 +1,15 @@
+{
+    "hosting": {
+        "site": "crud-app-e20c4",
+        "public": "dist/dashboard-prueba",
+        "ignore": [
+            "firebase.json",
+            "*/.",
+            "*/node_modules/*"
+        ],
+        "rewrites": [{
+            "source": "**",
+            "destination": "/index.html"
+        }]
+    }
+}

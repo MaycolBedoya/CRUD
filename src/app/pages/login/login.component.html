@@ -7,14 +7,14 @@
                     Login
                 </span>
 
-                <span *ngIf="loginForm.submitted && loginForm.controls['email'].errors" class="text-danger animate__animated animate__fadeIn">El correo es obligatorio</span>
+                <span *ngIf="loginForm.submitted && loginForm.controls['email'].errors" class="text-danger animate__animated animate__fadeIn">Correo electrónico incorrecto</span>
                 <div class="wrap-input100 m-b-16">
                     <input [(ngModel)]="userLogin.email" class="input100" type="email" name="email" placeholder="Correo electrónico" required email>
 
                     <span class="focus-input100"></span>
                 </div>
 
-                <span *ngIf="loginForm.submitted && loginForm.controls['password'].errors" class="text-danger animate__animated animate__fadeIn">Ingresa al menos 6 caracteres</span>
+                <span *ngIf="loginForm.submitted && loginForm.controls['password'].errors" class="text-danger animate__animated animate__fadeIn">Contraseña incorrecta</span>
                 <div class="wrap-input100 m-b-16" data-validate="Password is required">
                     <input [(ngModel)]="userLogin.password" class="input100" type="password" name="password" placeholder="Contraseña" required minlength="6">
                     <span class="focus-input100"></span>
@@ -38,16 +38,6 @@
                 <div class="container-login100-form-btn m-t-17">
                     <button class="login100-form-btn" type="submit">
                         Ingresar
-                    </button>
-                </div>
-                <div class="container-login100-form-btn m-t-17">
-                    <button class="login100-form-btn" type="submit">
-                        Ingresar con Google <i class="ml-2 fab fa-google" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="container-login100-form-btn m-t-17">
-                    <button class="login100-form-btn" type="submit">
-                        Ingresar con Facebook<i class="ml-2 fab fa-facebook"></i>
                     </button>
                 </div>
             </form>

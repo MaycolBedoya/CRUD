@@ -54,7 +54,7 @@ export class UserComponent implements OnInit {
     if (this.user.id) {
       request = this.userService.updateUser(this.user);
     } else {
-      request= this.userService.createUser(this.user);
+      request= this.userService.createUser(this.user,'prueba');
     }
     request.subscribe(resp=>{
       Swal.fire({

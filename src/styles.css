@@ -3,12 +3,13 @@
 @import '~animate.css/animate.min';
 @import'~assets/css/main';
 @import'~assets/css/util';
+@import '~normalize.css';
 body {
     overflow-x: hidden;
 }
 
 
-/*TABLE*/
+/*USERS TABLE*/
 
 @media only screen and (max-width: 768px) {
     table {
@@ -29,6 +30,18 @@ body {
     margin-top: 15px!important;
 }
 
+.table thead {
+    vertical-align: middle!important;
+    border: 0!important;
+}
+
+.table td,
+.table th {
+    padding: .75rem;
+    vertical-align: middle!important;
+    border: 0!important;
+}
+
 
 /*INPUT NUMBER*/
 
@@ -47,4 +60,24 @@ input::-webkit-inner-spin-button {
 
 .font-color {
     color: #fff!important;
+}
+
+
+/*USER INPUT*/
+
+.user-label {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.user-input {
+    background-color: #E6E6E6!important;
+    height: 45px!important;
+    border: 0!important;
+}
+
+.user-input:focus {
+    box-shadow: none!important;
+    background-color: #cacaca!important;
+    color: #42484e!important;
 }

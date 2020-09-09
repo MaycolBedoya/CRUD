@@ -97,11 +97,13 @@ export class UsersService {
     }
   }
 
-  createUser(user:UserModel){
+  createUser(user:UserModel, uid:string){
+    //console.log(user,uid);
     return this.http.post(`${this.url}/users.json`,user)
     .pipe(
       map((resp:any)=>{
-        user.id=resp.name;
+        user.id=uid;
+        console.log(user,uid);
         return user;
       })
     );
